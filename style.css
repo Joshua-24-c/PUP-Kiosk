@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    background: #800000;
+    color: white;
+    padding: 20px 40px;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    border-bottom: 4px solid #ffcc00;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 20px;
+    width: 85%;
+}
+
+#pup-map-img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.modal {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 200px;
+    text-align: center;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.area {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+}
+
+.area:hover + .modal {
+    display: block;
+}
+
+.subtext {
+    font-size: 0.8em;
+    color: #666;
+    display: block;
+}
